@@ -22,7 +22,7 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     const value = parseInt(amount.value);
     const rand = Math.floor(Math.random() * dummyText.length);
-    if(value < 0 || value >10 || isNaN(value)){
+    if(value <= 0 || value >10 || isNaN(value)){
         result.innerHTML = `<p>${dummyText[rand]}</p>`;
     }else{
         let slicedArray = dummyText.slice(0, value);
